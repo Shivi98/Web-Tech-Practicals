@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regex</title>
+    <script>
+      let validateMail = function() {
+        let email = document.getElementById('email').value;
+        let error = '';
+        let pattern = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/");
+        console.log(email);
+        console.log(pattern.test(email));
+        if (pattern.test(email)) {
+          error = 'Congrats! This is a valid email';
+        } else {
+          error = 'Not a valid email. Try again';
+        }
+        document.getElementById('error').innerHTML = error;
+      }
+    </script>
+  </head>
+
+  <body>
+    <label> Email </label>
+    <input type="text" placeholder="Enter a valid email address" id="email">
+    <button onclick="validateMail()">Submit</button>
+    <span id="error"></span>
+  </body>
+
+</html>
