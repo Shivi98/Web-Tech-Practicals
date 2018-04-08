@@ -10,7 +10,7 @@
       let validateMail = function() {
         let email = document.getElementById('email').value;
         let error = '';
-        let pattern = new RegExp("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/");
+        let pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
         console.log(email);
         console.log(pattern.test(email));
         if (pattern.test(email)) {

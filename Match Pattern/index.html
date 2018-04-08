@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style></style>
+    <script>
+      let match = function() {
+        let pattern = /^document.getElementById('input').value$/;
+        let text = document.getElementById('text').value;
+        result = '';
+        if (pattern.test(text)) {
+          result = 'Pattern is present in the text below';
+        } else {
+          result = 'Pattern is not present in the text below';
+        }
+        document.getElementById('result').innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter a pattern to match" id="input">
+    <span id="result"></span>
+    <br>
+    <p id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem est magnam, repellendus molestias quam officia, doloremque, blanditiis possimus beatae reprehenderit esse illo vitae eaque. Recusandae aut numquam magni rem labore cum animi saepe officia
+      consectetur illum laudantium quis dicta libero quibusdam necessitatibus, quisquam laborum soluta cupiditate ex voluptas doloribus sed quas eveniet, in. Quibusdam magnam error obcaecati, cum, eaque fugiat aut id illum alias quisquam voluptas quaerat
+      voluptatem ex ducimus explicabo quam non corporis nam, sed aliquam, veritatis nesciunt et quod? Ullam dicta sapiente nobis, rerum praesentium repudiandae animi nemo provident, unde laborum voluptates ea quis atque sit perferendis tempore.</p>
+  </body>
+</html>
