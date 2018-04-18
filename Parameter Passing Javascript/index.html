@@ -3,10 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Parameter Passing</title>
-
   </head>
 
   <body>
@@ -29,8 +26,9 @@
       var z = {
         first: true
       };
+      console.log("Before Call ", x, y, z.first);
       f(x, y, z);
-      console.log(x, y, z.first); // 4, ["eeny", "miny", "mo", "foo"], false
+      console.log("After Call", x, y, z.first); // 4, ["eeny", "miny", "mo", "foo"], false
 
       // Example 2
       var a = ["1", "2", {
@@ -43,7 +41,7 @@
       a[2] = "5"; // a is now ["1", "4", "5"]; c still has the value
       // it had at the time of assignment, i.e. a reference to
       // the object {foo:"bar"}
-      console.log(b, c.foo); // "2" "bar"
+      console.log("After Call", b, c.foo); // "2" "bar"
     </script>
   </body>
 

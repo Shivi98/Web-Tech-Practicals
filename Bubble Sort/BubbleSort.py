@@ -19,3 +19,6 @@ def bubble(bad_list):
             if bad_list[i] > bad_list[i + 1]:
                 sorted = False
                 bad_list[i], bad_list[i + 1] = bad_list[i + 1], bad_list[i]
+
+
+main()

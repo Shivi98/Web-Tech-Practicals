@@ -17,7 +17,7 @@ def main():
 
 def printDict(allGalaxies):
     for key, val in allGalaxies.items():
-        print(key, '=>', value)
+        print(key, '=>', val)
 
 
 def printKeys(allGalaxies):

@@ -1,10 +1,44 @@
-html, body { height: 100%; padding: 0; margin: 0; }
-div { width: 49%; height: 49%; border: 1px solid; float: left;}
-.background_color { background-color: black; }
-.background_color p{ color: white; }
-.fonts ul li.fcr{ font-family: "Fira Code Retina", serif; }
-.fonts ul li.italics{ font-style: italic; }
-.alignment .left { text-align: left; }
-.alignment .center { text-align: center; }
-.alignment .right { text-align: right; }
-.links .custom_links li a { text-decoration: none; }
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  width: 49%;
+  height: 49%;
+  border: 1px solid;
+  float: left;
+}
+
+.background_color {
+  background-color: black;
+}
+
+.background_color p {
+  color: white;
+}
+
+.fonts ul li.fcr {
+  font-family: "Fira Code Retina", serif;
+}
+
+.fonts ul li.italics {
+  font-style: italic;
+}
+
+.alignment .left {
+  text-align: left;
+}
+
+.alignment .center {
+  text-align: center;
+}
+
+.alignment .right {
+  text-align: right;
+}
+
+.links .custom_links li a {
+  text-decoration: none;
+}

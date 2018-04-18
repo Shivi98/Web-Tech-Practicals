@@ -1,0 +1,70 @@
+<html>
+
+  <head>
+    <title>Forms Example</title>
+  </head>
+
+  <body>
+    <h2>Registration</h2>
+    <form>
+      <fieldset>
+        <legend>User Registration</legend>
+        <div>
+          <label for="name">Name</label> <input id="name" name="name" type="text" placeholder="Put in your name...." />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Password" />
+        </div>
+        <div>
+          <label for="age">Age</label> <input type="number" id="age" name="age" /></div>
+        <div>
+          <label for="birthday">Birthday</label> <input type="date" id="birthday" name="birthday" />
+        </div>
+        <div>
+          Male: <input type="radio" name="gender" value="Male" /> Female:
+          <input type="radio" name="gender" value="Female" checked /> Other:
+          <input type="radio" name="gender" value="Other" />
+        </div>
+        <div>
+          <label for="super-powers">Super Powers</label>
+          <ul>
+            <li><input type="checkbox" name="super-powers" value="Flying" /> Flying</li>
+            <li><input type="checkbox" name="super-powers" value="Invisible" /> Invisible</li>
+            <li><input type="checkbox" name="<super-></super->powers" value="DeadPool" /> DeadPool</li>
+          </ul>
+        </div>
+
+        <div>
+          <label>Choose a browser from this list: <input list="browsers" name="myBrowser" /></label>
+          <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Internet Explorer">
+            <option value="Opera">
+            <option value="Safari">
+            <option value="Microsoft Edge">
+          </datalist>
+        </div>
+        <div>
+          <select name="text"> <!--Supplement an id here instead of using 'text'-->
+            <option value="value1">Value 1</option>
+            <option value="value2" selected>Value 2</option>
+            <option value="value3">Value 3</option>
+          </select>
+        </div>
+        <div>
+          <textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+        </div>
+
+
+        <div>
+          <button type="submit">Register</button>
+        </div>
+
+      </fieldset>
+
+    </form>
+  </body>
+
+</html>

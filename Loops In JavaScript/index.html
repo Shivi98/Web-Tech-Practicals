@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Loops</title>
 
-</head>
-<body>
-<div class="for-loop">
-  <h1> For Loop Example</h1>
-  <div>
-    <label for="dates"></label><select name="Date" id="dates"></select>
-    <label for="months"></label><select name="Month" id="months"></select>
-    <label for="years"></label><select name="Year" id="years"></select>
-  </div>
-</div>
+  <head>
+    <meta charset="UTF-8">
+    <title>Loops</title>
 
-<div class="while-loop">
-  <h1>While Loop Example</h1>
-  <input type="text" placeholder="Enter an Integer" id="number">
-  <button onclick="show()">Show Binary</button>
-  <span id="binary"></span>
-</div>
+  </head>
 
-<script>
-  var options = "";
-  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  for(var i = 0; i <= 31; i++){
-    options += "<option>" + i + "</option>";
-  }
-  document.getElementById('dates').innerHTML = options;
-  options = "";
-  for(var month in months){
-    options += "<option>" + months[month] + "</option>";
-  }
-  document.getElementById('months').innerHTML = options;
-  options = "";
-  for(var i = 1900; i <= 2018; i++){
-    options += "<option>" + i + "</option>";
-  }
-  document.getElementById('years').innerHTML = options;
-  show = function() {
-    options = "";
-    var number = parseInt(document.getElementById('number').value);
-    console.log(number);
-    var remainder = 0;
-    if(number === 0){
-      do {
-        remainder = Math.floor(number % 2);
-        number = Math.floor(number / 2);
-        options += remainder;
-      }while(number > 0)
-    }
-    else {
-      while(number > 0) {
-        remainder = Math.floor(number % 2);
-        number = Math.floor(number / 2);
-        console.log(remainder)
-        options = remainder.toString() + options;
+  <body>
+    <div class="for-loop">
+      <h1> For Loop Example</h1>
+      <div>
+        <label for="dates"></label><select name="Date" id="dates"></select>
+        <label for="months"></label><select name="Month" id="months"></select>
+        <label for="years"></label><select name="Year" id="years"></select>
+      </div>
+    </div>
+
+    <div class="while-loop">
+      <h1>Do While / While Loop Example</h1>
+      <input type="text" placeholder="Enter an Integer" id="number">
+      <button onclick="show()">Show Binary</button>
+      <span id="binary"></span>
+    </div>
+
+    <script>
+      var options = "";
+      var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      for (var i = 0; i <= 31; i++) {
+        options += "<option>" + i + "</option>";
       }
-    }
-    document.getElementById('binary').innerHTML = "Binary Output:  " + options;
-  }
-</script>
-</body>
+      document.getElementById('dates').innerHTML = options;
+      options = "";
+      for (var month in months) {
+        options += "<option>" + months[month] + "</option>";
+      }
+      document.getElementById('months').innerHTML = options;
+      options = "";
+      for (var i = 1900; i <= 2018; i++) {
+        options += "<option>" + i + "</option>";
+      }
+      document.getElementById('years').innerHTML = options;
+      show = function() {
+        options = "";
+        var number = parseInt(document.getElementById('number').value);
+        console.log(number);
+        var remainder = 0;
+        if (number === 0) {
+          do {
+            remainder = Math.floor(number % 2);
+            number = Math.floor(number / 2);
+            options += remainder;
+          } while (number > 0)
+        } else {
+          while (number > 0) {
+            remainder = Math.floor(number % 2);
+            number = Math.floor(number / 2);
+            console.log(remainder)
+            options = remainder.toString() + options;
+          }
+        }
+        document.getElementById('binary').innerHTML = "Binary Output:  " + options;
+      }
+    </script>
+  </body>
+
 </html>
